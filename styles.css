@@ -3,6 +3,11 @@ html, body {
 	padding:0;
 }
 
+input[type=button] {
+	float: left;
+	margin: 1em;
+}
+
 #container {
 	width: 640px;
 	height: 640px;
@@ -10,4 +15,5 @@ html, body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
+	background-color: #ccc;
 }
