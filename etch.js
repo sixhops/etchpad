@@ -16,6 +16,8 @@ var makeDivs = function(length) {
 };
 
 var clickBlack = function() {
+	makeDivs( $("input:text").val() );
+	//makeDivs( 32 );
 	$(".cell").mouseenter(function() {
     	$(this).css("background-color", "#000");
     });
@@ -25,10 +27,11 @@ var getRandomColor = function() {
 	var red = Math.floor(Math.random() * 255);
 	var green = Math.floor(Math.random() * 255);
 	var blue = Math.floor(Math.random() * 255);
-	return "rgb(" + red + "," + green + "," + blue")";
-}
+	return "rgb(" + red + "," + green + "," + blue + ")";
+};
 
 var clickRandom = function() {
+	makeDivs( $("input:text").val() );
 	var color;
 	$(".cell").mouseenter(function() {
 		color = getRandomColor();
@@ -37,26 +40,28 @@ var clickRandom = function() {
 };
 
 var clickTrails = function() {
+	makeDivs( $("input:text").val() );
+
 	$(".cell").mouseenter(function() {
     	$(this).css("background-color", "#000");
+    	// animate black to #ccc
     });
 };
 
 
 $(document).ready(function() {
-	var length = prompt("Please enter a length for the sides.");
-	makeDivs(length);
-/*
-    $("#container").css("background-color", "#ccc");
 
-    var length = prompt("Please enter a length for the sides.");
+	//makeDivs( 32 );
 
-    makeDivs(length);
+    //$("#container").css("background-color", "#666");
 
+    //var length = prompt("Please enter a length for the sides.");
+
+    //makeDivs(length);
+
+    /*
     $(".cell").mouseenter(function() {
     	$(this).css("background-color", "#000");
     });
-
-*/
-
+	*/
 });
